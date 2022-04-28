@@ -3,7 +3,8 @@ module github.com/tnelson-doghouse/steampipe-plugin-hubspot
 go 1.17
 
 require (
-	github.com/judell/steampipe-plugin-hello v0.0.0-20220428150221-49795fb7afb6
+//	github.com/tnelson-doghouse/steampipe-plugin-hubspot
+	github.com/tnelson-doghouse/hubspot v0.1.6
 	github.com/turbot/steampipe-plugin-sdk v1.8.3
 )
 

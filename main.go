@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/judell/steampipe-plugin-hello/hello"
-	"github.com/turbot/steampipe-plugin-sdk/plugin"
+	"github.com/tnelson-doghouse/steampipe-plugin-hubspot/hubspot"
+	"github.com/turbot/steampipe-plugin-sdk/v3/plugin"
 )
 
 func main() {
-	plugin.Serve(&plugin.ServeOpts{PluginFunc: hello.Plugin})
+	plugin.Serve(&plugin.ServeOpts{
+		PluginFunc: hubspot.Plugin})
 }
