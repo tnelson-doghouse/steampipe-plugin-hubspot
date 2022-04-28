@@ -1,2 +1,2 @@
 install:
-	go build -o  ~/.steampipe/plugins/hub.steampipe.io/plugins/turbot/hello@latest/steampipe-plugin-hello.plugin *.go
+	go build -o  ~/.steampipe/plugins/hub.steampipe.io/plugins/tnelson-doghouse/hubspot@latest/steampipe-plugin-hubspot.plugin *.go
