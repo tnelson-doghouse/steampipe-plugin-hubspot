@@ -1,8 +1,11 @@
-module github.com/judell/steampipe-plugin-hello
+module github.com/tnelson-doghouse/steampipe-plugin-hubspot
 
 go 1.17
 
-require github.com/turbot/steampipe-plugin-sdk v1.5.0
+require (
+	github.com/tnelson-doghouse/hubspot HEAD
+	github.com/turbot/steampipe-plugin-sdk/v3 v3.1.0
+)
 
 require (
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d // indirect
