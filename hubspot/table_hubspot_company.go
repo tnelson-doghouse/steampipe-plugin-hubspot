@@ -110,7 +110,7 @@ func listCompanies(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateDa
 //		apiEndpoint := fmt.Sprintf("rest/api/2/users/search?startAt=%d&maxResults=%d", last, maxResults)
 //		apiEndpoint := fmt.Sprintf("/crm/v3/objects/companies")
 
-		companies, err := client.CompaniesList(nextlink);
+		companies, err := client.CompaniesList(nextlink, (nextlink == ""));
 
 		if err != nil {
 			plugin.Logger(ctx).Error("hubspot_company.listCompanies", "get_request_error", err)
@@ -125,6 +125,7 @@ func listCompanies(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateDa
 		} */
 
 		for _, company := range companies.Results {
+			plugin.Logger(ctx).Error("hubspot_company.listCompanies", "Adding 1 here")
 			d.StreamListItem(ctx, company)
 			// Context may get cancelled due to manual cancellation or if the limit has been reached
 			if d.QueryStatus.RowsRemaining(ctx) == 0 {
